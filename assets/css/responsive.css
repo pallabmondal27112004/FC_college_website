@@ -1,0 +1,196 @@
+@media screen and (max-width: 550px){
+    .logo-section .first{
+        font-size: 1.7rem;
+        text-shadow: 2px 2px 2px black;
+        margin: 8px;
+    }
+    .logo-section .second .logo img{
+        width: 100px;
+        height: 100px;
+    }
+    .logo-section .second .english{
+        width: 45%;
+    }
+    .logo-section .second .english p{
+        font-size: .8rem;
+    }
+    /* ----------------home section------------  */
+    .home-page .home h1{
+        font-size: 1.7rem;
+        margin-top: 0%;
+    }
+    .home-page .home p{
+        font-size: 1.4rem;
+        font-weight: 800;
+    }
+    .home-page .home .description{
+        font-size: .9rem;
+        color: rgb(247, 242, 242);
+        font-weight: 500;
+
+    }
+    .home-page .priciple{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+       flex-direction: column;
+        width: 100%;
+        /* gap: 2%; */
+        padding: 0% 2%;
+    
+    }
+    .home-page .priciple .img{
+        width: 60%; 
+    }
+    .home-page .priciple .img img{
+        width: 100%;
+        /* height: 80%; */
+    }
+    .home-page .priciple .principle-say{
+        width: 90%;
+    }
+    .home-page .priciple .principle-say h1{
+        /* margin: 7px 0px; */
+        font-size: 1.7rem;
+    }
+    .home-page .priciple .principle-say p{
+        font-size: .9rem;
+        margin-bottom: 5%;
+    }
+    /* ------------------admission page------------  */
+    
+    /* -----------------footer----------- */
+    .footer .fourth iframe{
+        width: 220px;
+        height: 220px;
+    
+
+    }
+    .footer .fourth{
+        margin-top: 3%;
+    }
+    .footer  h1{
+        font-size: 1.4rem;
+        margin: 4% 0;
+    } 
+    .footer p{
+        font-size: .9rem;
+        color: rgb(179, 175, 175);
+    }
+    .footer .first{
+        width: 70%;
+    }
+    .footer .third .social-media{
+        gap: 4%;
+    }
+    .footer .third .social-media i{
+        width: 45px;
+        height: 30px;
+        background-color: rgb(179, 175, 175);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        border-radius: 7px;
+        color: black;
+    }
+    .fa-bars{
+        display: block;
+        opacity: 1;
+    }
+    .developerName div h1{
+    text-align: center;
+    font-size: 1rem;
+    color: blue;
+}
+   .developerName div{
+    width: 95%;
+    color: white;
+    background-color: rgb(179, 175, 175);
+        clip-path: polygon(12% 0, 89% 0, 100% 100%, 0% 100%);
+        padding: 7px;
+
+}
+/*-------------------head responsive design--------------*/
+
+    .header{
+    position: fixed;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 10px;
+    top: 0px;
+    height: 100vh;
+    left: -40%;
+    background-color: rgba(7, 214, 251);
+     z-index: 100;
+     transition: all .5s;
+
+    }
+    .header .head2{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6%;
+        
+    }
+    .header .head2 li{
+    
+        list-style-type: none;
+        padding: 10px 10px;
+        font-size: 1rem;
+        position: relative;
+        cursor: pointer;
+        font-size: .4rem;
+        width: 90%;
+        font-weight: bold;
+        margin: 7% 0;
+        border-radius: 5px;
+        transition: all .4s ease-in .2s ;
+
+    }
+    .header .head2 li a{
+        font-size: 1rem;
+    }
+    .header .head2 li:hover{
+        background-color: rgba(5, 5, 164);
+        color: white;
+        
+    }
+    .header .head2 .fa-xmark{
+        display: block;
+    }
+   /* -------------------company logo-------------------/ */
+   .marquee{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 100px; */
+    padding: .6rem;
+}
+.marquee .logo{
+    width: 60px;
+
+    margin: 4px;
+    height: 60px;
+    border-radius: 50%;
+    
+}
+marquee .logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+.companyLogo{
+    width: 100%;
+    background-color: blue;
+    margin-bottom: 2rem;
+}
+}
+

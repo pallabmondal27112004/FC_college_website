@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <link rel="stylesheet" href="icons/fontawesome-free-6.5.2-web/css/all.css">
+
+    <link rel="stylesheet" href="assets/css/w3.css">    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+
+        body::before {
+            content: "";
+            background: url("assets/img/Campus park graduation_ Happy.jpg")center center/cover;
+            /* filter: blur(3px); */
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            opacity: 1;
+            z-index: -10;
+        }
+
+        .registerPage {
+            width: 30%;
+            height: 80%;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5%;
+            border-radius: 20px;
+            border: 2px solid white;
+            background-color: rgba(0, 0, 0, .7);
+            position: relative;
+            color: white;
+            padding: 25PX;
+            box-shadow: 8px 8px 8px black;
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            font-size: 1rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            padding: 8px 5px;
+        }
+
+        .common {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        input[type="submit"] {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            width: 100%;
+        }
+        .checkbox1{
+            display: flex;
+            width: 50%;
+            justify-content: flex-start;
+            
+        }
+        .checkbox2{
+            display: flex;
+            width: 75%;
+            justify-content: flex-start;
+            
+        }
+        .fa-eye{
+            position: absolute;
+            top: 39%;
+            right: 10%;
+            /*color: black;*/
+        }
+        .fa-eye-slash{
+            position: absolute;
+            top: 39%;
+            right: 10%;
+            /*color: black;*/
+            color: white;
+        }
+      
+        .registerPage> a{
+            color: white;
+            text-decoration: none;
+        }
+        .registerPage> h1{
+            text-shadow: 1px 1px 1px black;
+        }
+
+        @media screen and (max-width: 550px) {
+            .registerPage {
+            width: 90%;
+            height: 80%;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5%;
+            border-radius: 20px;
+            border: 2px solid white;
+            background-color: rgba(0, 0, 0, .5);
+            position: relative;
+            color: white;
+            padding: 25PX;
+        }
+        .checkbox2{
+            margin-top: 4px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <i class="fa-solid fa-envelope"> -->
+    <div class="registerPage">
+        <h1>Register Here</h1>
+        <input id="name"  type="text" placeholder="Enter your  name">
+        <input id="email" type="email" placeholder="Enter your emali ">
+        <input id="password" type="password" placeholder="Enter your password"><i class="fa-solid fa-eye" id="fa-eye1" onclick="changeIcon();"></i>
+        <input id="conform" type="password" placeholder="Enter your conform password">
+        <div class="common">
+            <label for="genter">Gender</label>
+            <div class="checkbox1"> 
+                <input type="radio" name="radio" id=""><label for="">male</label>
+                <input type="radio" name="radio"><label for="">Female</label>
+            </div>
+        </div>
+        <div class="common">
+           <div>
+                 <label for="">Known Language</label>
+           </div>
+            <div class="checkbox2">
+                <input type="checkbox" name="chech" id=""><label for="checkbox">Hindi</label>
+                <input type="checkbox" name="chech"><label for="LanguageHindi">English</label>
+                <input type="checkbox" name="chech"></input><label>Bengali</label>
+            </div>
+
+        </div>
+        <input id="submit" type="submit" value="Submit" onclick="formVelidation()">
+        <a href="index.htm">Back to home </a>
+    </div>
+
+    <script>
+        let name = document.getElementById("name")
+        let email = document.getElementById("email")
+        let password = document.getElementById("password")
+        let conform = document.getElementById("conform")
+        let icon = document.getElementById("fa-eye1")
+        let submit = document.getElementById("submit")
+        let chech = /^a-zA-Z0-9*@*a-z*.\*a-z[2,3]$/
+        function formVelidation(){
+            if(name.value==""||name.value==" "){
+                alert("Enter name");
+                name.focus();
+                return false;
+
+            }else if(email.value==""||email.value==" " || !email.value.match(/^[a-zA-Z0-9]+[@$]+[a-z]+[.]+[a-z]{2,3}$/)){
+                alert("Enter emali");
+                email.focus();
+                return false;
+
+            }else if(password.value==""||password.value==" "){
+                alert("Enter password");
+                password.focus();
+                return false
+            }else if(conform.value!=password.value || conform.value=="" || conform.value==" "){
+                alert("enter conform passsword");
+                conform.focus();
+                return false
+            }else{
+                alert("application accepted");
+                return true;
+            }
+        }
+         let value = 1;
+        let val= 1;
+        function changeIcon(){
+            // icon.classList.toggle("fa-eye-slash");
+            if(password.value!=""){
+
+                if(value==1){
+                 icon.classList.remove("fa-eye"); 
+                 icon.classList.add("fa-eye-slash"); 
+                 val--;
+                 }else{
+                    icon.classList.add("fa-eye"); 
+                     icon.classList.remove("fa-eye-slash");
+                     val++;
+                }
+               
+                if (value==1){
+                     password.setAttribute("type", "text");
+                     value--;
+                }else{
+                     password.setAttribute("type", "password");
+                     value++;
+                }
+            }
+            
+           
+            // password.style.type = "text";
+        }
+    </script>
+</body>
+
+</html>
